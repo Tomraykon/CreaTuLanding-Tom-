@@ -1,15 +1,12 @@
-import CartWidget from './CartWidget';
+import { Link } from "react-router-dom";
 
-function NavBar() {
+export default function NavBar() {
   return (
     <nav>
-      <h1>MiTienda</h1>
-      <a href="#">Inicio</a>
-      <a href="#">Productos</a>
-      <a href="#">Contacto</a>
-      <CartWidget />
+      <Link to="/">Inicio</Link> |{" "}
+      <Link to="/category/monitores">Monitores</Link> |{" "}
+      <Link to="/category/gpus">GPUs</Link> |{" "}
+      <Link to="/category/cpus">CPUs</Link>
     </nav>
   );
 }
-
-export default NavBar;
